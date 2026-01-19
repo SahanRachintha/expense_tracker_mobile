@@ -7,7 +7,7 @@ import 'models.dart';
 class ExpenseCard extends StatelessWidget {
   final Expense expense;
 
-  const ExpenseCard({Key? key, required this.expense}) : super(key: key);
+  const ExpenseCard({super.key, required this.expense});
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +89,7 @@ class ExpenseCard extends StatelessWidget {
 
 // ==================== EXPENSES SCREEN ====================
 class ExpensesScreen extends StatefulWidget {
-  const ExpensesScreen({Key? key}) : super(key: key);
+  const ExpensesScreen({super.key});
 
   @override
   State<ExpensesScreen> createState() => _ExpensesScreenState();
@@ -190,7 +190,7 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
 
 // ==================== ADD EXPENSE SCREEN ====================
 class AddExpenseScreen extends StatefulWidget {
-  const AddExpenseScreen({Key? key}) : super(key: key);
+  const AddExpenseScreen({super.key});
 
   @override
   State<AddExpenseScreen> createState() => _AddExpenseScreenState();
@@ -343,7 +343,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                   final categories = snapshot.data!;
 
                   return DropdownButtonFormField<String>(
-                    value: _selectedCategoryId,
+                    initialValue: _selectedCategoryId,
                     decoration: InputDecoration(
                       labelText: 'Category',
                       border: OutlineInputBorder(
@@ -377,7 +377,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                   final methods = snapshot.data!;
 
                   return DropdownButtonFormField<String>(
-                    value: _selectedPaymentMethodId,
+                    initialValue: _selectedPaymentMethodId,
                     decoration: InputDecoration(
                       labelText: 'Payment Method',
                       border: OutlineInputBorder(
@@ -447,7 +447,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
 
 // ==================== BUDGET SCREEN ====================
 class BudgetScreen extends StatelessWidget {
-  const BudgetScreen({Key? key}) : super(key: key);
+  const BudgetScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -556,7 +556,7 @@ class BudgetScreen extends StatelessWidget {
 
 // ==================== REPORTS SCREEN ====================
 class ReportsScreen extends StatelessWidget {
-  const ReportsScreen({Key? key}) : super(key: key);
+  const ReportsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -630,7 +630,7 @@ class ReportsScreen extends StatelessWidget {
             else
               ...expenses.take(10).map((expense) {
                 return ExpenseCard(expense: expense);
-              }).toList(),
+              }),
           ],
         );
       },
@@ -681,7 +681,7 @@ class ReportsScreen extends StatelessWidget {
 
 // ==================== CATEGORIES SCREEN ====================
 class CategoriesScreen extends StatelessWidget {
-  const CategoriesScreen({Key? key}) : super(key: key);
+  const CategoriesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -855,7 +855,7 @@ class CategoriesScreen extends StatelessWidget {
 
 // ==================== PAYMENT METHODS SCREEN ====================
 class PaymentMethodsScreen extends StatelessWidget {
-  const PaymentMethodsScreen({Key? key}) : super(key: key);
+  const PaymentMethodsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -13,7 +13,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
 
 // ==================== AUTH WRAPPER ====================
 class AuthWrapper extends StatelessWidget {
-  const AuthWrapper({Key? key}) : super(key: key);
+  const AuthWrapper({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +55,7 @@ class AuthWrapper extends StatelessWidget {
 
 // ==================== LOGIN SCREEN ====================
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -267,7 +267,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
 // ==================== HOME SCREEN ====================
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -369,7 +369,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 // ==================== DASHBOARD SCREEN ====================
 class DashboardScreen extends StatelessWidget {
-  const DashboardScreen({Key? key}) : super(key: key);
+  const DashboardScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -533,7 +533,7 @@ class DashboardScreen extends StatelessWidget {
               else
                 ...recentExpenses.map((expense) {
                   return ExpenseCard(expense: expense);
-                }).toList(),
+                }),
             ],
           ),
         );
